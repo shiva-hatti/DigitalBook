@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "e2035242-efc0-488a-8813-a0ac8007d36a",
+		"name": "DigitaBook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "H&T Service",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getUserById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "create book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Lord of the flies\",\r\n    \"code\": \"LTFD\",\r\n    \"price\": 10000,\r\n    \"category\":\"\",\r\n    \"publisher\":\"abc\",\r\n    \"publisheddate\":\"2018-03-29T13:34:00.000\",\r\n    \"logopath\":\"C:/Users/Mahesh/Desktop/Cognizant/HT/Task\",\r\n    \"cotent\":\"Your requests can include multiple details determining the data Postman will send to the API you are working with. Enter a URL and choose a method, then optionally specify a variety of other details.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/book/createBook/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"book",
+								"createBook",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editBook",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "blockAndUnblock",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
