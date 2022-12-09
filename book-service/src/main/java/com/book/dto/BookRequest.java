@@ -11,6 +11,10 @@ import lombok.Data;
 
 @Data
 public class BookRequest {
+	
+
+	private Long bookId;
+	
 	@NotBlank
 	@Size(min = 3,max = 20)
 	private String title;
@@ -19,7 +23,7 @@ public class BookRequest {
 	@Size(max = 3)
 	private String code;
 
-	private String authorname;
+	private Long authorid;
 
 	@NotNull
 	@Positive(message = "Only Positive Values")
@@ -33,7 +37,7 @@ public class BookRequest {
 	@Size(max = 20)
 	private String publisher;
 
-	private boolean isActive;
+	private boolean isactive;
 	
 	@NotNull
 	private Date publisheddate;
@@ -43,5 +47,8 @@ public class BookRequest {
 	
 	@NotBlank
 	private String cotent;
+	
+	public BookRequest(String code, String title) {
+	}
 
 }

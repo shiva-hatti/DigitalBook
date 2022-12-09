@@ -33,7 +33,7 @@ public class Book {
 	@Size(max = 3)
 	private String code;
 
-	private String authorname;
+	private Long authorid;
 
 	@NotNull
 	@Positive(message = "Only Positive Values")
@@ -47,7 +47,7 @@ public class Book {
 	@Size(max = 20)
 	private String publisher;
 
-	private boolean isActive;
+	private boolean isactive;
 
 	@NotNull
 	private Date updatedon;
@@ -60,15 +60,15 @@ public class Book {
 	@NotBlank
 	private String cotent;
 
-	public Book(String title, String code, String authorname, int price, String category, String publisher,
-			boolean isActive, Date updatedon, Date publisheddate, String logopath, String cotent) {
+	public Book(String title, String code, Long authorid, int price, String category, String publisher,
+			boolean isactive, Date updatedon, Date publisheddate, String logopath, String cotent) {
 		this.title = title;
 		this.code = code;
-		this.authorname = authorname;
+		this.authorid = authorid;
 		this.price = price;
 		this.category = category;
 		this.publisher = publisher;
-		this.isActive = isActive;
+		this.isactive = isactive;
 		this.updatedon = updatedon;
 		this.publisheddate = publisheddate;
 		this.logopath = logopath;
