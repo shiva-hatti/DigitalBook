@@ -1,0 +1,6 @@
+<form novalidate #f="ngForm" name="form">
+    <input [(ngModel)]="user.username" name="=username" #username='ngModel' placeholder="User Name"><br><br>
+    <input [(ngModel)]="user.password" name="password" placeholder="Password"><br><br>
+    <button (click)="signin()">Signin</button>
+    <!-- {{user.username | ellipsis:2}} -->
+</form>

@@ -1,0 +1,9 @@
+<form novalidate #f="ngForm" name="form">
+    <input [(ngModel)]="search.category" name="=category" #category='ngModel' placeholder="Category"><br><br>
+    <input [(ngModel)]="search.title" name="title" #title="ngModel" placeholder="Title"><br><br>
+    <input [(ngModel)]="search.author" #author="ngModel" name="author" placeholder="Author Name"><br><br>
+    <input [(ngModel)]="search.price" #price="ngModel" type="number" name="price" placeholder="Price"><br><br>
+    <input [(ngModel)]="search.publisher" #publisher="ngModel" name="publisher" placeholder="Publisher"><br><br>
+    <br>
+    <button (click)="searchbook()">Search</button>
+</form>

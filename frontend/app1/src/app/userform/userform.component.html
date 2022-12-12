@@ -1,0 +1,43 @@
+<!-- <form novalidate #f="ngForm" name="form">
+    <input [(ngModel)]="user.username" name="=username" #username='ngModel' placeholder="User Name"><br><br>
+    <input [(ngModel)]="user.email" name="email" #email="ngModel" placeholder="Email"><br><br>
+    <input [(ngModel)]="user.password" required minlength="6" #password="ngModel" name="password" placeholder="Password"><br><br>
+    <input type="radio" [(ngModel)]="user.rolename">AUTHOR
+    <input type="radio" [(ngModel)]="user.rolename">READER
+    <div class="alert alert-danger" role="alert" *ngIf="password.errors">
+        <div *ngIf="password.errors['required']">Password is required</div>
+        <div *ngIf="password.errors['minlength']">
+            Password must be at least 6 characters
+        </div>
+    </div>
+    <br>
+    <button (click)="signup()">signup</button>
+</form> -->
+<div style="margin-top: 20px">
+    <h2>New User? Signup</h2>
+      <hr/>
+    </div>
+    <div style="margin-top: 30pt">
+    <form (ngSubmit)="signup()" #signupForm="ngForm">
+        <div class="form-group">
+            <label for="fullname"><strong>Name</strong></label>
+            <input class="form-control" id="fullname" [(ngModel)]="user.username" placeholder="Full Name" required name="uName" #fullname="ngModel"/>
+        </div>
+        <div [hidden]="fullname.valid || fullname.pristine" class="alert alert-danger">Name is required</div>
+        <div class="form-group">
+          <label for="emailField"><strong>Email address</strong></label>
+          <input type="email" class="form-control" id="emailField" [(ngModel)]="user.email" required placeholder="name@example.com" name="uEmail" #email="ngModel"/>
+        </div>
+        <div [hidden]="email.valid || email.pristine" class="alert alert-danger">Email address is required</div>
+    <div class="form-group">
+          <label for="password"><strong>Password</strong></label>
+          <input type="password" class="form-control" id="password" [(ngModel)]="user.password" name="password" required placeholder="Password" #pswd="ngModel"/>
+        </div>
+    <div [hidden]="pswd.valid || pswd.pristine" class="alert alert-danger">Password is required</div>
+    <br><div class="form-group">
+                <input type="radio" [(ngModel)]="user.rolename">AUTHOR
+                <input type="radio" [(ngModel)]="user.rolename">READER
+              </div>  <br>                                    
+        <button type="submit" class="btn btn-success" [disabled]="!signupForm.form.valid">Submit</button>
+      </form>
+    </div>

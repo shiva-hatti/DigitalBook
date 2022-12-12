@@ -1,0 +1,29 @@
+<div style="margin-top: 20px">
+    <h3>New Book Registration</h3>
+      <hr/>
+    </div>
+    <div style="margin-top: 20pt">
+    <form (ngSubmit)="createbook()" #signupForm="ngForm">
+        <div class="form-group">
+            <label for="title"><strong>Book Title</strong></label>
+            <input class="form-control" id="title" [(ngModel)]="book.title" placeholder="Book Title" required name="title" #title="ngModel"/>
+        </div>
+        <div [hidden]="title.valid || title.pristine" class="alert alert-danger">Title is required</div>  
+        <div class="form-group">
+            <label for="code"><strong>Book Code</strong></label>
+            <input class="form-control" id="code" [(ngModel)]="book.code" placeholder="Book code" required name="code" #code="ngModel"/>
+        </div>
+        <div [hidden]="code.valid || code.pristine" class="alert alert-danger">Code is required</div>   
+        <div class="form-group">
+            <label for="category"><strong>Book Category</strong></label>
+            <input class="form-control" id="category" [(ngModel)]="book.category" placeholder="Book Category" required name="category" #category="ngModel"/>
+        </div>
+        <div [hidden]="category.valid || category.pristine" class="alert alert-danger">Category is required</div>  
+        <div class="form-group">
+            <label for="price"><strong>Book Price</strong></label>
+            <input class="form-control" type="number" id="price" [(ngModel)]="book.price" placeholder="Book price" required name="price" #price="ngModel"/>
+        </div>
+        <div [hidden]="price.valid || price.pristine" class="alert alert-danger">Price is required</div>                             
+        <button type="submit" class="btn btn-success" [disabled]="!signupForm.form.valid">Submit</button>
+      </form>
+    </div>
