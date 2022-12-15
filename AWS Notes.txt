@@ -1,0 +1,18 @@
+Instance ID : i-00bac498519940e28
+
+
+Auto-assigned IP address : 43.207.48.254
+
+
+Password
+?;I3KXHjZQSJMMsoRuxF9m(UUlUPV*m&
+
+
+mvn package
+
+database-1.ctru6hkbahb8.ap-northeast-1.rds.amazonaws.com
+
+https://ap-northeast-1.console.aws.amazon.com/rds/home?region=ap-northeast-1#databases:
+
+
+java -jar spring-boot-security-jwt-0.0.1-SNAPSHOT.jar --spring.datasource.url=jdbc:mysql://database-1.ctru6hkbahb8.ap-northeast-1.rds.amazonaws.com:3306/userdb --spring.datasource.username=admin --spring.datasource.password=admin123 --spring.jpa.hibernate.ddl-auto=create
