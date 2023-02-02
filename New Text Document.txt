@@ -1,0 +1,44 @@
+
+https://chrome.google.com/webstore/detail/angular-devtools/ienfalfjdbdpebioblfackkekamfmbnh/related
+
+For specific angular version installation command
+npm install -g @angular/cli@11
+
+Angular 15
+
+npm i -g @angular/cli
+npm i -g @angular/app
+
+ng -v
+
+ng new app1 //create project
+
+ng serve //for run project
+ng g c userform // create component
+
+ng g s user // create service files
+ng g pipe ellipsis // create custom pipe
+
+ng build //creating deployment files
+
+git status
+git add*
+git commit -m ""
+git push
+
+npm i
+
+Uninstall Angular
+npm uninstall -g @angular/cli
+npm cache clean --force
+npm cache verify
+
+app.component.html -- need to declare component
+app.module.ts -- first need mention the component
+userform.component.html -- for front end
+userform.component.ts -- class
+userform.component.css -- css 
+user.service.ts -- service
+
+https://www.baeldung.com/linux/multiple-node-js-versions
+chrome keys : ctr+p (open folder)
